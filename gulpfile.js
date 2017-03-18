@@ -84,7 +84,7 @@ gulp.task('html', function() {
 
 gulp.task('sass', function() {
     return gulp
-        .src(srcPath + '/sass/app.scss')
+        .src(srcPath + '/scss/app.scss')
         .pipe(sourcemaps.init())
         .pipe(sass()).on('error', notify.onError(function (error) {
             return "Problem file : " + error.message;
@@ -172,7 +172,7 @@ gulp.task('server', ['build'], function() {
 
 gulp.task('default', ['build', 'server'], function() {
     gulp.watch([srcPath + '/*.html'], ['html', browser.reload]);
-    gulp.watch([srcPath + '/sass/**/*.scss'], ['sass', browser.reload]);
+    gulp.watch([srcPath + '/scss/**/*.scss'], ['sass', browser.reload]);
     gulp.watch([srcPath + '/fonts/**/*.fonts'], ['fonts', browser.reload]);
     gulp.watch([srcPath + '/js/**/*.js'], ['javascript', browser.reload]);
 });
