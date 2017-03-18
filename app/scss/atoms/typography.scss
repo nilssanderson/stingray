@@ -1,0 +1,93 @@
+/*------------------------------------*\
+  #TYPOGRAPHY
+\*------------------------------------*/
+// from typecast.com modernscale.css
+
+$body-font-size: 1rem;
+$heading-font-size: 1rem;
+
+body {
+  font-size: 100%;
+}
+
+body, caption, th, td, input, textarea, select, option, legend, fieldset, h1, h2, h3, h4, h5, h6 {
+  font-size-adjust: 0.5;
+}
+
+p,
+a,
+span,
+ul, ol,
+dl, dt, dd {
+  font-size: $body-font-size; /* 1x body copy size = 16px */
+}
+
+pre,
+code {
+  font-size: ($body-font-size * .9); /* .9x body copy size = 14.4px */
+}
+
+h1 {
+  font-size: ($heading-font-size * 2); /* 2x body copy size = 32px */
+  line-height: 1.25; /* 45px / 36px */
+
+  @include respond-to(medium) {
+    font-size: ($heading-font-size * 2.5); /* 2.5x body copy size = 40px */
+    line-height: 1.125;
+  }
+
+  @include respond-to(large) {
+    font-size: ($heading-font-size * 3); /* 3x body copy size = 48px */
+    line-height: 1.05;
+    /* keep to a multiple of the 20px line height and something more appropriate for display headings */
+  }
+}
+
+h2 {
+  font-size: ($heading-font-size * 1.625); /* 1.625x body copy size = 26px */
+  line-height: 1.15384615; /* 30px / 26px */
+
+  @include respond-to(medium) {
+    font-size: ($heading-font-size * 2); /* 2x body copy size = 32px */
+    line-height: 1.25;
+  }
+
+  @include respond-to(large) {
+    font-size: ($heading-font-size * 2.25); /* 2.25x body copy size = 36px */
+    line-height: 1.25;
+  }
+}
+
+h3 {
+  font-size: ($heading-font-size * 1.375); /* 1.375x body copy size = 22px */
+  line-height: 1.13636364; /* 25px / 22px */
+
+  @include respond-to(medium) {
+    font-size: ($heading-font-size * 1.5); /* 1.5x body copy size = 24px */
+    line-height: 1.25;
+  }
+
+  @include respond-to(large) {
+    font-size: ($heading-font-size * 1.75); /* 1.75x body copy size = 28px */
+    line-height: 1.25;
+  }
+}
+
+h4 {
+  font-size: ($heading-font-size * 1.125); /* 1.125x body copy size = 18px */
+  line-height: 1.11111111;
+
+  @include respond-to(medium) {
+    line-height: 1.22222222; /* (22px / 18px */
+  }
+}
+
+blockquote {
+  font-size: ($heading-font-size * 1.25); /* 20px / 16px */
+  line-height: 1.25; /* 25px / 20px */
+
+  @include respond-to(medium) {
+    font-size: ($heading-font-size * 1.5); /* 24px / 16px = */
+    line-height: 1.45833333; /* 35px / 24px */
+  }
+}

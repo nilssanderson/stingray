@@ -1,0 +1,32 @@
+/*------------------------------------*\
+  #LINKS
+\*------------------------------------*/
+
+$link-color: #333;
+$link-hover-color: #000;
+
+a {
+  color: $link-color;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+
+  &:hover {
+    color: $link-hover-color;
+
+    &:after {
+      transform: scale(0);
+    }
+  }
+
+  &:after {
+    border-bottom: solid 1px $link-hover-color;
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    transform: scale(1);
+    transition: all .25s ease-in;
+    width: 100%;
+  }
+}

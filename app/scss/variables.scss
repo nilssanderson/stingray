@@ -1,0 +1,52 @@
+$body-padding: 0;
+
+
+$base-spacing: 1rem;
+
+
+// Colours
+$color-0: #FFFFFF;
+$color-1: #464553;
+$color-2: #49A0D5;
+$color-3: #F7F7F9;
+$color-4: #EF5B5B;
+$color-5: #ADCAAC;
+
+
+$color-twitter: #55ACEF;
+$color-facebook: #3B5999;
+
+
+$body-background-color: $color-3;
+
+
+// Breakpoints
+$small: 768px;
+$medium: 769px;
+$large: 769px;
+$xlarge: 1024px;
+$xxlarge: 1280px;
+
+$max-page-width: 1180px;
+
+$body-font: Lato;
+// $heading-font: Neuton;
+$heading-font: Neuton;
+
+@import url('https://fonts.googleapis.com/css?family=#{$body-font}|#{$heading-font}');
+
+%default-typeface,
+%base-typeface {
+	font-family: $body-font;
+	font-weight: 300;
+}
+
+%heading-typeface {
+	font-family: $heading-font;
+	font-weight: normal;
+}
+
+%light-heading-typeface {
+	font-family: $heading-font;
+	font-weight: 300;
+}
