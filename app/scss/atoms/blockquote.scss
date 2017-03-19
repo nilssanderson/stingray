@@ -1,0 +1,49 @@
+/*------------------------------------*\
+  #BLOCKQUOTE
+\*------------------------------------*/
+
+$blockqoute-font-size: 1.25rem;
+$blockqoute-margin: 3rem 0;
+$blockqoute-text-color: #000;
+  $blockqoute-font-size__link: .8rem;
+  $blockqoute-text-color__link: #aaa;
+
+$blockqoute-icon: '\f10d';
+
+blockquote {
+  color: $blockqoute-text-color;
+  font-style: italic;
+  margin: $blockqoute-margin;
+  position: relative;
+
+  font-size: ($blockqoute-font-size * 1.25); /* 20px / 16px */
+  line-height: 1.25; /* 25px / 20px */
+
+  @include respond-to(medium) {
+    font-size: ($blockqoute-font-size * 1.5); /* 24px / 16px = */
+    line-height: 1.45833333; /* 35px / 24px */
+  }
+  
+  &:before {
+    content: $blockqoute-icon;
+    font-family: fontawesome;
+    font-size: 1rem;
+    left: -1.5rem;
+    position: absolute;
+    top: -.1rem;
+  }
+  
+  a {
+    color: $blockqoute-text-color__link;
+    display: block;
+    font-size: $blockqoute-font-size__link;
+    font-style: normal;
+    text-align: right;
+    text-transform: uppercase;
+    width: 100%;
+
+    &:after {
+      display: none;
+    }
+  }
+}

@@ -81,13 +81,3 @@ h4 {
     line-height: 1.22222222; /* (22px / 18px */
   }
 }
-
-blockquote {
-  font-size: ($heading-font-size * 1.25); /* 20px / 16px */
-  line-height: 1.25; /* 25px / 20px */
-
-  @include respond-to(medium) {
-    font-size: ($heading-font-size * 1.5); /* 24px / 16px = */
-    line-height: 1.45833333; /* 35px / 24px */
-  }
-}

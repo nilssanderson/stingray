@@ -1,0 +1,40 @@
+/*------------------------------------*\
+  #CODE
+\*------------------------------------*/
+
+$code-background-color: #333;
+$code-font-size: .85rem;
+$code-margin: 3rem 0 2rem;
+$code-padding: 0.5rem 2rem;
+$code-text-color: #999;
+  $code-background-color__before: #aaa;
+  $code-font-size__before: .75rem;
+  $code-padding__before: .25rem .5rem;
+  $code-text__before: 'Code';
+  $code-text-color__before: #000;
+
+$code-icon: '\f10d';
+
+code {
+  background-color: $code-background-color;
+  color: $code-text-color;
+  display: block;
+  margin: $code-margin;
+  padding: $code-padding;
+  position: relative;
+  
+  &:before {
+    background-color: $code-background-color__before;
+    color: $code-text-color__before;
+    content: $code-text__before;
+    font-size: $code-font-size__before;
+    left: 0;
+    padding: $code-padding__before;
+    position: absolute;
+    top: -1.3rem;
+  }
+
+  > p {
+    font-size: $code-font-size;
+  }
+}
