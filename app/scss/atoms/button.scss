@@ -1,0 +1,62 @@
+/*------------------------------------*\
+  #INPUT
+\*------------------------------------*/
+
+$button-icon-before: '';
+$button-icon-after: '';
+$button-icon-margin: .25rem;
+
+$button-background-color: #4ca2df;
+$button-border-radius: 2rem;
+$button-font-size: .75rem;
+$button-highlight-color: #aaa;
+$button-margin: .5rem .5rem .5rem 0;
+$button-padding: 1rem (3rem + $button-icon-margin) 1rem 3rem;
+$button-text-color: #fff;
+  $button-background-color--hover: darken($button-background-color, 20%);
+  $button-highlight-color--hover: #fff;
+  $button-text-color--hover: #fff;
+
+$button-background-color--primary: #4ca2df;
+$button-background-color--secondary: #4ca2df;
+$button-background-color--twitter: #4ca2df;
+$button-background-color--facebook: #4ca2df;
+
+button,
+.btn,
+input[type="submit"] {
+  background-color: $button-background-color;
+  border: none;
+  border-radius: $button-border-radius;
+  box-sizing: border-box;
+  color: $button-text-color;
+  cursor: pointer;
+  display: inline-block;
+  font-size: $button-font-size;
+  margin: $button-margin;
+  outline: none;
+  padding: $button-padding;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all .25s linear;
+  
+  &:hover {
+    background-color: $button-background-color--hover;
+  }
+
+  &:before {
+    color: $button-text-color;
+    content: $button-icon-before; // \f099
+    font-family: fontawesome;
+    margin: 0 $button-icon-margin 0 0;
+  }
+
+  &:after {
+    color: $button-text-color;
+    content: $button-icon-after; // \f105
+    font-family: fontawesome;
+    position: absolute;
+    right: 1rem;
+  }
+}
