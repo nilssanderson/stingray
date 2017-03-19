@@ -2,10 +2,14 @@
   #LABEL
 \*------------------------------------*/
 
+$label-font-size: .75rem;
+$label-padding: 1rem 1rem .5rem;
+$label-text-color: #aaa;
+
 label {
-  color: #aaa;
+  color: $label-text-color;
   display: block;
-  font-size: .8rem;
-  padding: 1rem;
+  font-size: $label-font-size;
+  padding: $label-padding;
   text-transform: uppercase;
 }

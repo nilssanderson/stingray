@@ -2,11 +2,13 @@
   #INPUT
 \*------------------------------------*/
 
+$input-font-size: 1.1rem;
 $input-highlight-color: #aaa;
-$input-padding: .5rem 1rem;
+$input-margin: 0 0 2rem;
+$input-padding: .5rem 1rem 1rem;
 $input-text-color: #000;
   $input-background-color--focus: #f4f4f4;
-  $input-padding--focus: .5rem 1rem;
+  $input-padding--focus: $input-padding;
   $input-text-color--focus: #000;
 
 input[type="text"],
@@ -15,14 +17,17 @@ input[type="email"],
 input[type="url"] {
   border: none;
   border-bottom: 1px solid $input-highlight-color;
+  box-sizing: border-box;
   color: $input-text-color;
-  margin: 0 0 1rem;
+  display: block;
+  margin: $input-margin;
   outline: none;
   padding: $input-padding;
   transition: all .25s linear;
+  width: 100%;
   
   &:focus {
-    background-color: $input-background-color--focus;
+    // background-color: $input-background-color--focus;
     border-bottom: 1px solid $input-text-color--focus;
     padding: $input-padding--focus;
     transition: all .25s linear;

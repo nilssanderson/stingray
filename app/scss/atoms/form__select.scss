@@ -11,19 +11,20 @@ select {
 	appearance: none;
   background-color: $select-background-color;
   background-image: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-arrow-down-b-128.png');
-  background-size: 10%;
+  background-size: 1rem;
   background-repeat: no-repeat;
   background-position: 95% 50%;
   border-radius: 0;
   border: none;
-  display: inline-block;
+  box-sizing: border-box;
+  display: block;
   height: $select-height;
   margin: $select-margin;
   outline: none;
   padding: 0 1rem;
   text-transform: uppercase;
   transition: all .25s linear;
-  width: 40%;
+  width: 100%;
 
   &:hover, &:focus {
     background-color: $select-background-color--hover;

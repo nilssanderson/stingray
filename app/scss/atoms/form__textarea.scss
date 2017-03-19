@@ -1,0 +1,27 @@
+/*------------------------------------*\
+  #INPUT
+\*------------------------------------*/
+
+$textarea-font-size: 1.1rem;
+$textarea-highlight-color: #aaa;
+$textarea-margin: 0;
+$textarea-padding: .5rem 1rem;
+$textarea-text-color: #aaa;
+  $textarea-background-color--focus: #f4f4f4;
+  $textarea-padding--focus: $textarea-padding;
+  $textarea-highlight--focus: #000;
+
+textarea {
+  border: none;
+  border-bottom: 1px solid $textarea-highlight-color;
+  box-sizing: border-box;
+  display: block;
+  margin: $textarea-margin;
+  outline: none;
+  padding: $textarea-padding;
+  width: 100%;
+  
+  &:focus {
+    border-color: $textarea-highlight--focus;
+  }
+}

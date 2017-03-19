@@ -1,0 +1,54 @@
+/*------------------------------------*\
+  #CHECKBOX-RADIO
+\*------------------------------------*/
+
+$checkbox-color: #aaa;
+$checkbox-font-size: .85rem;
+$checkbox-height: 14px;
+$checkbox-highlight-color: #aaa;
+$checkbox-margin: 1rem .5rem 0 1rem;
+$checkbox-padding: 0;
+$checkbox-text-color: #000;
+$checkbox-width: 14px;
+  $checkbox-selected-color: #000;
+
+$checkbox-icon: '\f096';
+  $checkbox-checked-icon: '\f046';
+
+$radio-button-icon: '\f10c';
+  $radio-button-checked-icon: '\f192';
+
+input[type=checkbox], input[type=radio] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: $checkbox-height;
+  margin: $checkbox-margin;
+  outline: none;
+  padding: $checkbox-padding;
+  position: relative;
+  width: $checkbox-width;
+  
+  &:before {
+    background: transparent;
+    color: $checkbox-color;
+    content: '';
+    font-family: fontawesome;
+    font-size: $checkbox-font-size;
+    height: 7px;
+    left: 30%;
+    position: absolute;
+    top: 30%;
+    transform: translate3d(-50%, -50%, 0);
+    width: 7px;
+  }
+
+  &:checked:before {
+    color: $checkbox-selected-color;
+  }
+}
+
+input[type=checkbox]:before { content: $checkbox-icon; }
+input[type=checkbox]:checked:before { content: $checkbox-checked-icon; }
+
+input[type="radio"]:before { content: $radio-button-icon; }
+input[type="radio"]:checked:before { content: $radio-button-checked-icon; }
