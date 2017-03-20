@@ -1,0 +1,29 @@
+/*------------------------------------*\
+  #METER
+\*------------------------------------*/
+
+$meter-background-color: #eee;
+$meter-border-radius: 3px;
+$meter-highlight-color: #ccc;
+$meter-height: 20px;
+$meter-width: 250px;
+  $meter-background-color__value: #4ca2df;
+
+meter {
+  border: none;
+  height: $meter-height;
+  width: $meter-width;
+}
+
+meter::-webkit-meter-bar {
+  background-color: $meter-background-color;
+  background-image: none;
+  border-radius: $meter-border-radius;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+meter::-webkit-meter-optimum-value {
+  background-color: $meter-background-color__value;
+  background-image: none;
+  border-radius: $meter-border-radius;
+}
