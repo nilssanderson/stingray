@@ -1,0 +1,50 @@
+/*------------------------------------*\
+  #FIGURE
+\*------------------------------------*/
+
+$figure-border-radius: 5px;
+$figure-font-size: .85rem;
+$figure-highlight-color: #fff;
+$figure-margin: 1rem 0;
+$figure-padding: 0;
+$figure-text-color: #fff;
+  
+  $figcaption-padding: 1rem;
+
+figure {
+  border-radius: $figure-border-radius;
+  display: block;
+  margin: $figure-margin;
+  overflow: hidden;
+  padding: $figure-padding;
+  position: relative;
+  
+  img {
+    border-radius: $figure-border-radius;
+  }
+}
+
+figcaption {
+  bottom: 0;
+  color: $figure-text-color;
+  display: block;
+  font-size: $figure-font-size;
+  padding: $figcaption-padding;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+
+  a {
+    color: $figure-text-color;
+    font-size: $figure-font-size;
+  
+    &:after {
+      border-color: $figure-highlight-color;
+      color: $figure-text-color;
+    }
+    
+    &:hover {
+      color: $figure-text-color;
+    }
+  }
+}

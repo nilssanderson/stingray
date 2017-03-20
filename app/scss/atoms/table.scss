@@ -1,0 +1,33 @@
+/*------------------------------------*\
+  #TABLE
+\*------------------------------------*/
+
+$table-padding__cell: 1rem;
+
+table {
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  padding: $table-padding__cell;
+}
+
+th {
+  border-bottom: 1px solid #aaa;
+  color: #aaa;
+  font-size: .8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+td {
+  border-bottom: 1px solid #eee;
+  color: #333;
+
+  tfoot & {
+    border: none;
+    color: #aaa;
+    font-size: .8rem;
+  }
+}

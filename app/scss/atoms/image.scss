@@ -1,0 +1,11 @@
+/*------------------------------------*\
+  #IMAGE
+\*------------------------------------*/
+
+$image-height: auto;
+$image-width: 100%;
+
+img {
+  height: $image-height;
+  width: $image-width;
+}
