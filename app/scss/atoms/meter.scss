@@ -5,12 +5,13 @@
 $meter-background-color: #eee;
 $meter-border-radius: 3px;
 $meter-highlight-color: #ccc;
-$meter-height: 20px;
-$meter-width: 250px;
+$meter-height: 15px;
+$meter-width: 50%;
   $meter-background-color__value: #4ca2df;
 
 meter {
   border: none;
+  display: block;
   height: $meter-height;
   width: $meter-width;
 }
@@ -20,10 +21,14 @@ meter::-webkit-meter-bar {
   background-image: none;
   border-radius: $meter-border-radius;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+  box-sizing: border-box;
 }
 
 meter::-webkit-meter-optimum-value {
-  background-color: $meter-background-color__value;
-  background-image: none;
-  border-radius: $meter-border-radius;
+  background-image:
+    -webkit-linear-gradient(top,rgba(255, 255, 255, .25),rgba(0, 0, 0, .25)), 
+    -webkit-linear-gradient(left, #09c, #f44);
+
+  background-size: 35px 20px, 100% 100%, 100% 100%;
+  border-radius: $meter-border-radius; 
 }
